@@ -164,8 +164,11 @@ address {
 .hero {
     padding: 188px 0;
     background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-
 .hero-container {
 }
 
@@ -308,12 +311,21 @@ address {
 .team-soc-list {
     display: flex;
     gap: 24px;
+    align-items: center;
 }
 
 .team-soc-item {
     width: 40px;
     height: 40px;
 }
+
+/* .team-soc-item::after {
+    content:''
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+} */
 
 .team-soc-link {
     display: flex;
