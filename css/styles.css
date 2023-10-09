@@ -71,6 +71,8 @@ address {
 /* ===HEADER=== */
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+
 }
 
 .header-container {
@@ -110,26 +112,36 @@ address {
 }
 
 .header-menu-link {
-    color:#2e2f42;
+    color: #404bbf;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+    /* position: relative; */
 }
 
 .header-menu-link:focus, 
 .header-menu-link:hover {
-    color: #404bbf;
 }
 
-.header-menu-link:hover::after {
+.header-menu-link::after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .header-menu-link:hover::after {
     display: block;
     border-bottom: 4px solid #404bbf;
     margin-top: 20px;
-}
+} */
 
 .header-address {
     color: #434455;
@@ -169,6 +181,7 @@ address {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1440px;
 }
 .hero-container {
 }
@@ -203,7 +216,8 @@ address {
     min-width: 169px;
     border-radius: 4px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn > body {
@@ -249,14 +263,17 @@ address {
 }
 
 .advantages-icon {
-    fill: 
 }
 
-/* .advantages-icon::after {
+.advantages-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
     border-radius: 4px;
-    border: 1px solid #8E8F99;
-    background-color: #F4F4FD;
-} */
+    margin-bottom: 8px;
+}
 /* ===ADVANTAGE (Section 2) END=== */
 
 /* ===TEAM (Section 3)=== */
@@ -328,6 +345,7 @@ address {
 .team-soc-item {
     width: 40px;
     height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link {
@@ -343,6 +361,7 @@ address {
 
 .team-soc-link:hover,
 .team-soc-link:focus {
+    /* background-color: #404bbf; */
     background-color: #31D0AA;
 }
 
