@@ -114,7 +114,7 @@ address {
 }
 
 .header-menu-link {
-    color: #404bbf;
+    color:#2E2F42;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -129,12 +129,12 @@ address {
     color:#404bbf;
 }
 
-.active {
+.current {
     color:#404bbf;
     position: relative;
 }
 
-.active:after {
+.current::after {
     content: "";
     position: absolute;
     left: 0;
@@ -143,8 +143,9 @@ address {
     background-color: #404bbf;
     border-radius: 2px;
     display: block;
-    width: 48px;
+    width: 100%;
     height: 4px;
+    flex-shrink: 0;
 }
 
 .header-address {
@@ -404,11 +405,10 @@ address {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%);
 }
 
-.portfolio-item:hover .portfolio-cover-block {
-    transform: translateY(0%);
+.portfolio-item:hover .portfolio-cover-text {
+    transform: translateY(0);
 }
 
 .portfolio-card {}
@@ -435,30 +435,28 @@ address {
     border-top: none;
 }
 
-.portfolio-cover-wrap{
+.portfolio-cover-wrap {
     position: relative;
     overflow: hidden;
 }
 
-.portfolio-cover-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 40px 32px;
-    display: flex;
-    align-items: center;
-    background-color: #4D5AE5;
-    height: 100%;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: auto;
-}
-
-.portfolio-cover-text { 
+.portfolio-cover-text {
     color: #F4F4FD;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
 }
 
 /* ===PORTFOLIO (Section 4) END=== */
